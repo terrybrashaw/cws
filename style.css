@@ -1,0 +1,292 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-size: 1.6rem;
+    font-weight: normal;
+    font-family: 'Lato';
+    line-height: 1.5;
+    color: inherit;
+}
+
+* + * {
+    margin-top: 1.5rem;
+}
+
+body {
+    margin-top: 0;
+}
+
+a {
+    color: #2e7d32;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+b {
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #F2F2F2;
+    color: black;
+}
+
+#header-wrapper {
+    margin-top: 0;
+    background-color: #2e7d32;
+    height: 7rem;
+    box-shadow: 0 0.1rem 2.4rem rgba(0, 0, 0, 0.07);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+#header-wrapper + * {
+    margin-top: 8.4rem;
+}
+
+header {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 96rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header > * {
+    margin-top: 0;
+}
+
+header > h1 {
+    font-family: 'Merriweather';
+    font-weight: bold;
+    color: white;
+    font-size: 3.8rem;
+    margin-right: auto;
+    text-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, .12);
+}
+
+header > a {
+    background: #ffea00;
+    border-radius: 2px;
+    color: #212121;
+    padding: 0.9rem 2.5rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-decoration: none;
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+#main-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 96rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    margin-bottom: 5rem;
+}
+
+main {
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, .26), 0 0.2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 0.2rem 0.2rem 0.4rem 0.4rem;
+    overflow: hidden;
+    background-color: white;
+}
+
+main > section {
+    margin: 0;
+    padding: 6rem 6rem;
+    box-sizing: border-box;
+    border-top: 0.15rem solid #e2e2e2;
+}
+
+main h2 {
+    font-size: 3rem;
+}
+
+main h3 {
+    font-weight: bold;
+}
+
+#mast {
+    padding: 0;
+    line-height: 0;
+    border-top: 0;
+}
+
+#mast > img {
+    height: auto;
+    max-width: 100%;
+}
+
+.services-subset + .services-subset {
+    margin-top: 2.4rem;
+}
+
+.services-subset {
+    border-top: 0.15rem solid #eee;
+    display: flex;
+}
+
+.services-subset > * {
+    margin-top: 2.4rem;
+}
+
+.services-subset > h3 {
+    flex: 0 0 17rem;
+}
+
+.services-subset > ul {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+}
+
+.services-subset > ul > li {
+    margin-top: 2.4rem;
+    width: 21rem;
+    white-space: nowrap;
+    flex: 0 0 auto;
+}
+
+#locations {
+    background: 
+        url("images/cws-map.png") center center no-repeat,
+        linear-gradient(to right, rgba(243, 241, 237, 0.83) 14%, transparent, transparent);
+    background-blend-mode: screen, normal;
+    height: 72rem;
+}
+
+#locations > ul > li {
+    background: url("images/marker.svg") center left no-repeat;
+    background-size: 2.2rem;
+    padding-left: 2.3rem;
+    line-height: 2.6rem;
+}
+
+#reviews {
+    background-color: #fafafa;
+}
+
+.review {
+    display: flex;
+}
+.review + * {
+    margin-top: 4rem;
+}
+
+.review > .reviewer {
+    flex: 1 0 7.5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3rem;
+}
+
+.review > .reviewer > img {
+    border-radius: 50%;
+    width: 6.2rem;
+    height: 6.2rem;
+}
+
+.review > .reviewer > cite {
+    text-align: center;
+    display: block;
+    margin-top: 0;
+}
+
+.review > blockquote {
+    margin-top: 0;
+}
+
+
+@media all and (max-width: 768px) {
+    .services-subset {
+        display: block;
+        border: none;
+    }
+
+    .services-subset > h3 {
+        margin-top: 0;
+        background-color: #f1f1f1;
+        color: #555;
+    }
+
+    .services-subset br {
+        display: none;
+    }
+}
+
+@media all and (max-width: 680px) {
+    main > section {
+        padding: 4rem 4rem;
+    }
+    html {
+        font-size: 60%;
+    }
+}
+
+@media all and (max-width: 570px) {
+    #main-wrapper {
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        box-shadow: none;
+    }
+    main > section {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+    #locations {
+        height: 50rem;
+        background-size: cover;
+    }
+    #header-wrapper + * {
+        margin-top: 7rem;
+    }
+    #header-wrapper {
+        margin-top: 0;
+        height: 7rem;
+    }
+
+    header {
+        display: block;
+        text-align: center;
+    }
+
+    .services-subset > ul > li {
+        margin-top: 1.1rem;
+    }
+    .services-subset + .services-subset {
+        margin-top: 4.5rem;
+    }
+}
+
+@media all and (max-width: 335px) {
+    header > h1 {
+        font-size: 3.5rem;
+    }
+    #header-wrapper {
+        height: 6.5rem;
+    }
+    #header-wrapper + * {
+        margin-top: 6.5rem;
+    }
+}
